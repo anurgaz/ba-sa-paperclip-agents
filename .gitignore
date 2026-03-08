@@ -1,0 +1,11 @@
+output/
+validation/reports/
+*.key
+.env
+site/
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+*.swo
+*~

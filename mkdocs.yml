@@ -1,0 +1,76 @@
+site_name: Flowlix Docs — B2B Processing Platform
+site_description: Документация BA/SA агентов платёжной B2B процессинговой платформы Flowlix
+site_url: https://flowlix.github.io/flowlix-docs/
+
+theme:
+  name: material
+  language: ru
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: ru
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/svg/
+      output_format: svg
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Главная: README.md
+  - Контекст:
+    - Глоссарий: docs/context/glossary.md
+    - Ограничения: docs/context/constraints.md
+    - Матрица решений: docs/context/decision-matrix.md
+    - Технологический стек: docs/context/tech-stack.md
+  - ADR:
+    - Шаблон: docs/adr/adr-template.md
+    - "ADR-001: Модель процессинга": docs/adr/adr-001-processing-model.md
+    - "ADR-002: Audit Log": docs/adr/adr-002-audit-log.md
+  - Бизнес-правила:
+    - Онбординг: docs/business-rules/onboarding-rules.md
+    - Транзакции: docs/business-rules/transaction-rules.md
+    - Споры: docs/business-rules/dispute-rules.md
+    - AML/CTF: docs/business-rules/aml-rules.md
+  - Данные:
+    - Data Dictionary: docs/data/data-dictionary.md
+    - SLA Metrics: docs/data/sla-metrics.md
+    - KPI Dictionary: docs/data/kpi-dictionary.md
+  - Интеграции:
+    - Карточные схемы: docs/integrations/card-schemes.md
+    - KYC/KYB провайдер: docs/integrations/kyc-provider.md
+    - TMS провайдер: docs/integrations/tms-provider.md
+  - Шаблоны:
+    - User Story: docs/templates/user-story-template.md
+    - API Specification: docs/templates/api-spec-template.md
+    - Sequence Diagram: docs/templates/sequence-diagram-template.md
+    - Test Case: docs/templates/test-case-template.md
+  - Примеры:
+    - User Story: docs/examples/example-user-story.md
+    - API Specification: docs/examples/example-api-spec.md
+    - Review Feedback: docs/examples/example-review-feedback.md
+  - Агенты:
+    - BA Agent:
+      - Профиль: agents/ba-agent/profile.md
+      - System Prompt: agents/ba-agent/system-prompt.md
+    - SA Agent:
+      - Профиль: agents/sa-agent/profile.md
+      - System Prompt: agents/sa-agent/system-prompt.md
