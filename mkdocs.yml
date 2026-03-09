@@ -68,6 +68,8 @@ nav:
     - API Specification (SA Agent): artifacts/merchant-onboarding/sa-api-spec.md
   - Инициирование спора:
     - User Story (BA Agent): artifacts/dispute-initiation/ba-user-story.md
+  - Верификация UBO:
+    - User Story (BA Agent): artifacts/ubo-verification/ba-user-story.md
 - Риски и ограничения: risks-and-limitations.md
 - Агенты:
   - BA Agent:
