@@ -3,22 +3,22 @@
 ARTIFACT="$1"
 REPO_ROOT="$2"
 
-CLEAN=$(sed 's/\x1b\[[0-9;]*m//g' "$ARTIFACT")
+CLEAN=$(sed 's/\x1b\[[0-9;]*m//g' "$ARTIFACT" | sed 's/\*\*//g')
 MISSING=""
 DETECTED=""
 
-# Detect type: API spec has priority if Rate Limit + HTTP method present
+# Detect type with strict priority
+HAS_USERSTORY=$(echo "$CLEAN" | grep -ciE 'As a.*I want|As an.*I want|Как.*хочу|User Story' || true)
+HAS_STARTUML=$(echo "$CLEAN" | grep -c '@startuml' || true)
 HAS_RATE=$(echo "$CLEAN" | grep -ciE 'Rate Limit' || true)
 HAS_HTTP=$(echo "$CLEAN" | grep -ciE 'POST |GET |PUT |DELETE |Endpoint' || true)
-HAS_STARTUML=$(echo "$CLEAN" | grep -c '@startuml' || true)
-HAS_USERSTORY=$(echo "$CLEAN" | grep -ciE 'As a.*I want|As an.*I want' || true)
 
-if [ "$HAS_RATE" -gt 0 ] && [ "$HAS_HTTP" -gt 0 ]; then
-    DETECTED="API Specification"
+if [ "$HAS_USERSTORY" -gt 0 ]; then
+    DETECTED="User Story"
 elif [ "$HAS_STARTUML" -gt 0 ]; then
     DETECTED="Sequence Diagram"
-elif [ "$HAS_USERSTORY" -gt 0 ] || echo "$CLEAN" | grep -qiE 'Acceptance Criteria|User Story'; then
-    DETECTED="User Story"
+elif [ "$HAS_RATE" -gt 0 ] && [ "$HAS_HTTP" -gt 0 ]; then
+    DETECTED="API Specification"
 elif echo "$CLEAN" | grep -qiE 'Test Steps|Preconditions'; then
     DETECTED="Test Case"
 else

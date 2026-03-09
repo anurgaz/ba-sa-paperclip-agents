@@ -15,10 +15,10 @@ fi
 CLEAN_ARTIFACT=$(sed 's/\x1b\[[0-9;]*m//g' "$ARTIFACT")
 
 # Extract all constraint IDs from constraints.md
-CONSTRAINT_IDS=$(grep -oE 'C-[0-9]+' "$CONSTRAINTS_FILE" | sort -u)
+CONSTRAINT_IDS=$(grep -oE 'C-[0-9]{3}' "$CONSTRAINTS_FILE" | sort -u)
 
 # Check if artifact references any C-XXX
-ARTIFACT_CONSTRAINTS=$(echo "$CLEAN_ARTIFACT" | grep -oE 'C-[0-9]+' | sort -u)
+ARTIFACT_CONSTRAINTS=$(echo "$CLEAN_ARTIFACT" | grep -oE 'C-[0-9]{3}' | sort -u)
 
 if [ -z "$ARTIFACT_CONSTRAINTS" ]; then
     echo "WARNING: No constraint references (C-XXX) found in artifact"
