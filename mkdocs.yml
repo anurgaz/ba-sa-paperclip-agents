@@ -19,10 +19,7 @@ theme:
 plugins:
 - search:
     lang: ru
-- kroki:
-    ServerURL: https://kroki.io
-    FencePrefix: kroki-
-    EnableBlockDiag: true
+- kroki
 markdown_extensions:
 - admonition
 - pymdownx.details
