@@ -32,39 +32,39 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Главная: README.md
+  - Главная: index.md
   - Контекст:
-    - Глоссарий: docs/context/glossary.md
-    - Ограничения: docs/context/constraints.md
-    - Матрица решений: docs/context/decision-matrix.md
-    - Технологический стек: docs/context/tech-stack.md
+    - Глоссарий: context/glossary.md
+    - Ограничения: context/constraints.md
+    - Матрица решений: context/decision-matrix.md
+    - Технологический стек: context/tech-stack.md
   - ADR:
-    - Шаблон: docs/adr/adr-template.md
-    - "ADR-001: Модель процессинга": docs/adr/adr-001-processing-model.md
-    - "ADR-002: Audit Log": docs/adr/adr-002-audit-log.md
+    - Шаблон: adr/adr-template.md
+    - "ADR-001: Модель процессинга": adr/adr-001-processing-model.md
+    - "ADR-002: Audit Log": adr/adr-002-audit-log.md
   - Бизнес-правила:
-    - Онбординг: docs/business-rules/onboarding-rules.md
-    - Транзакции: docs/business-rules/transaction-rules.md
-    - Споры: docs/business-rules/dispute-rules.md
-    - AML/CTF: docs/business-rules/aml-rules.md
+    - Онбординг: business-rules/onboarding-rules.md
+    - Транзакции: business-rules/transaction-rules.md
+    - Споры: business-rules/dispute-rules.md
+    - AML/CTF: business-rules/aml-rules.md
   - Данные:
-    - Data Dictionary: docs/data/data-dictionary.md
-    - SLA Metrics: docs/data/sla-metrics.md
-    - KPI Dictionary: docs/data/kpi-dictionary.md
+    - Data Dictionary: data/data-dictionary.md
+    - SLA Metrics: data/sla-metrics.md
+    - KPI Dictionary: data/kpi-dictionary.md
   - Интеграции:
-    - Карточные схемы: docs/integrations/card-schemes.md
-    - KYC/KYB провайдер: docs/integrations/kyc-provider.md
-    - TMS провайдер: docs/integrations/tms-provider.md
+    - Карточные схемы: integrations/card-schemes.md
+    - KYC/KYB провайдер: integrations/kyc-provider.md
+    - TMS провайдер: integrations/tms-provider.md
   - Шаблоны:
-    - User Story: docs/templates/user-story-template.md
-    - API Specification: docs/templates/api-spec-template.md
-    - Sequence Diagram: docs/templates/sequence-diagram-template.md
-    - Test Case: docs/templates/test-case-template.md
+    - User Story: templates/user-story-template.md
+    - API Specification: templates/api-spec-template.md
+    - Sequence Diagram: templates/sequence-diagram-template.md
+    - Test Case: templates/test-case-template.md
   - Примеры:
-    - User Story: docs/examples/example-user-story.md
-    - API Specification: docs/examples/example-api-spec.md
-    - Review Feedback: docs/examples/example-review-feedback.md
-  - Риски и ограничения: docs/risks-and-limitations.md
+    - User Story: examples/example-user-story.md
+    - API Specification: examples/example-api-spec.md
+    - Review Feedback: examples/example-review-feedback.md
+  - Риски и ограничения: risks-and-limitations.md
   - Агенты:
     - BA Agent:
       - Профиль: agents/ba-agent/profile.md
