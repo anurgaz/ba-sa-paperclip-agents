@@ -74,6 +74,11 @@ echo -e "Task: ${TASK}"
 echo -e "Output: ${OUTPUT_FILE}"
 echo ""
 
+# Support Paperclip adapter mode (issue already exists)
+if [ "${PAPERCLIP_SKIP_ISSUE_CREATE:-}" = "1" ] && [ -n "${PAPERCLIP_ISSUE_ID:-}" ]; then
+    ISSUE_ID="$PAPERCLIP_ISSUE_ID"
+    echo -e "${CYAN}[0/5] Using existing Paperclip issue: $ISSUE_ID${NC}"
+else
 # --- Paperclip: Create issue (no assignee to avoid checkout requirements) ---
 echo -e "${CYAN}[0/5] Creating issue in Paperclip...${NC}"
 
@@ -104,6 +109,7 @@ else
     echo "  Response: $ISSUE_RESPONSE"
 fi
 
+fi
 # Helper: post comment to Paperclip issue
 post_comment() {
     local body="$1"
@@ -271,12 +277,24 @@ $(cat "$OUTPUT_FILE")"
 
         echo -e "${GREEN}  Posted to Paperclip${NC}"
         echo ""
-        echo -e "${CYAN}[5/5] Complete${NC}"
+        echo -e "${CYAN}[5/6] Publishing to GitHub Pages...${NC}"
+        bash "$REPO_ROOT/pipeline/publish-to-pages.sh" "$OUTPUT_FILE" --agent "$AGENT" 2>&1 || echo -e "${YELLOW}  Warning: publish to Pages failed${NC}"
+        echo ""
+        echo -e "${CYAN}[6/6] Complete${NC}"
         echo -e "${GREEN}========================================${NC}"
         echo -e "${GREEN}  PASSED — Ready for human review${NC}"
         echo -e "${GREEN}  Artifact: $OUTPUT_FILE${NC}"
         [ -n "$ISSUE_ID" ] && echo -e "${GREEN}  Paperclip issue: $ISSUE_ID${NC}"
+        echo -e "${GREEN}  GitHub Pages: https://anurgaz.github.io/ba-sa-paperclip-agents/features/${NC}"
         echo -e "${GREEN}========================================${NC}"
+
+
+
+
+
+
+
+
         exit 0
     }
 
