@@ -66,6 +66,7 @@ nav:
     - Review Feedback: examples/example-review-feedback.md
   - Фичи:
     - Обзор: features/index.md
+    - "api-specification-post-api-v1-merchants (Document)": features/api-specification-post-api-v1-merchants/sa-document.md
     - "user-story-merchant-onboarding-via-api (User Story)": features/user-story-merchant-onboarding-via-api/ba-user-story.md
   - Риски и ограничения: risks-and-limitations.md
   - Агенты:
