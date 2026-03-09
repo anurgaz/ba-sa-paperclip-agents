@@ -262,7 +262,7 @@ Idempotency-Key: {unique_key}  # Обязателен для данной опе
 
 ## Sequence Diagram
 
-```plantuml
+```kroki-plantuml
 @startuml Subscription Cancellation Flow
 
 participant Merchant as M
@@ -330,7 +330,7 @@ GW --> M: 429 Too Many Requests\nRetry-After: 60
 
 ## Data Flow
 
-```plantuml
+```kroki-plantuml
 @startuml Subscription Cancellation Data Flow
 
 [Merchant] -> (API Gateway) : DELETE request

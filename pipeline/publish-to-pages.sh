@@ -124,6 +124,9 @@ for i, line in enumerate(lines):
 
 body = '\n'.join(lines[start:])
 
+# Convert plantuml fences to kroki-plantuml for rendering
+body = body.replace('\`\`\`plantuml', '\`\`\`kroki-plantuml')
+
 with open(target_path, 'w', encoding='utf-8') as f:
     f.write('---\n')
     f.write(f'title: \"{type_label}\"\n')
