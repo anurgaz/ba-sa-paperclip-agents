@@ -1,6 +1,6 @@
 site_name: Flowlix Docs — B2B Processing Platform
 site_description: Документация BA/SA агентов платёжной B2B процессинговой платформы Flowlix
-site_url: https://flowlix.github.io/flowlix-docs/
+site_url: https://anurgaz.github.io/ba-sa-paperclip-agents/
 
 theme:
   name: material
@@ -67,6 +67,7 @@ nav:
     - User Story: docs/examples/example-user-story.md
     - API Specification: docs/examples/example-api-spec.md
     - Review Feedback: docs/examples/example-review-feedback.md
+  - Риски и ограничения: docs/risks-and-limitations.md
   - Агенты:
     - BA Agent:
       - Профиль: agents/ba-agent/profile.md
