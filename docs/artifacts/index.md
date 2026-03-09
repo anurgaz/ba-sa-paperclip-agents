@@ -9,3 +9,4 @@
 | [Инициирование спора](dispute-initiation/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
 | [Верификация UBO](ubo-verification/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
 | [Рекуррентные платежи](recurrent-payments/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
+| [Рекуррентные платежи](recurrent-payments/sa-user-story.md) | SA Agent | User Story | 2026-03-09 12:08 UTC |

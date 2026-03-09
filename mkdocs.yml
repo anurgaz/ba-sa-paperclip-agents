@@ -72,6 +72,7 @@ nav:
     - User Story (BA Agent): artifacts/ubo-verification/ba-user-story.md
   - Рекуррентные платежи:
     - User Story (BA Agent): artifacts/recurrent-payments/ba-user-story.md
+    - User Story (SA Agent): artifacts/recurrent-payments/sa-user-story.md
 - Риски и ограничения: risks-and-limitations.md
 - Агенты:
   - BA Agent:
