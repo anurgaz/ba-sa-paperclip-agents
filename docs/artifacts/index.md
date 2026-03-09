@@ -5,3 +5,4 @@
 | Фича | Агент | Тип | Дата |
 |------|-------|-----|------|
 | [Онбординг мерчанта](merchant-onboarding/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
+| [Онбординг мерчанта](merchant-onboarding/sa-api-spec.md) | SA Agent | API Specification | 2026-03-09 12:08 UTC |

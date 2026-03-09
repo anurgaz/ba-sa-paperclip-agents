@@ -65,6 +65,7 @@ nav:
   - Обзор: artifacts/index.md
   - Онбординг мерчанта:
     - User Story (BA Agent): artifacts/merchant-onboarding/ba-user-story.md
+    - API Specification (SA Agent): artifacts/merchant-onboarding/sa-api-spec.md
 - Риски и ограничения: risks-and-limitations.md
 - Агенты:
   - BA Agent:
