@@ -1,7 +1,7 @@
 site_name: Flowlix Docs — B2B Processing Platform
-site_description: Документация BA/SA агентов платёжной B2B процессинговой платформы Flowlix
+site_description: Документация BA/SA агентов платёжной B2B процессинговой платформы
+  Flowlix
 site_url: https://anurgaz.github.io/ba-sa-paperclip-agents/
-
 theme:
   name: material
   language: ru
@@ -10,72 +10,66 @@ theme:
     primary: indigo
     accent: cyan
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-
+  - navigation.tabs
+  - navigation.sections
+  - navigation.expand
+  - search.suggest
+  - search.highlight
+  - content.code.copy
 plugins:
-  - search:
-      lang: ru
-
+- search:
+    lang: ru
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - tables
-  - toc:
-      permalink: true
-
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+- tables
+- toc:
+    permalink: true
 nav:
-  - Главная: index.md
-  - Контекст:
-    - Глоссарий: context/glossary.md
-    - Ограничения: context/constraints.md
-    - Матрица решений: context/decision-matrix.md
-    - Технологический стек: context/tech-stack.md
-  - ADR:
-    - Шаблон: adr/adr-template.md
-    - "ADR-001: Модель процессинга": adr/adr-001-processing-model.md
-    - "ADR-002: Audit Log": adr/adr-002-audit-log.md
-  - Бизнес-правила:
-    - Онбординг: business-rules/onboarding-rules.md
-    - Транзакции: business-rules/transaction-rules.md
-    - Споры: business-rules/dispute-rules.md
-    - AML/CTF: business-rules/aml-rules.md
-  - Данные:
-    - Data Dictionary: data/data-dictionary.md
-    - SLA Metrics: data/sla-metrics.md
-    - KPI Dictionary: data/kpi-dictionary.md
-  - Интеграции:
-    - Карточные схемы: integrations/card-schemes.md
-    - KYC/KYB провайдер: integrations/kyc-provider.md
-    - TMS провайдер: integrations/tms-provider.md
-  - Шаблоны:
-    - User Story: artifact-templates/user-story-template.md
-    - API Specification: artifact-templates/api-spec-template.md
-    - Sequence Diagram: artifact-templates/sequence-diagram-template.md
-    - Test Case: artifact-templates/test-case-template.md
-  - Примеры:
-    - User Story: examples/example-user-story.md
-    - API Specification: examples/example-api-spec.md
-    - Review Feedback: examples/example-review-feedback.md
-  - Фичи:
-    - Обзор: features/index.md
-    - "api-�-пе�-и�-ика�-ия-�-�-мена-подпи�-ки-� (User Story)": features/api-�-пе�-и�-ика�-ия-�-�-мена-подпи�-ки-�/sa-user-story.md
-    - "user-story-�-ек�-�-�-ен�-н�-е-пла�-ежи-�-е�-е� (User Story)": features/user-story-�-ек�-�-�-ен�-н�-е-пла�-ежи-�-е�-е�/ba-user-story.md
-    - "user-story-�-в�-ома�-и�-е�-кая-ве�-и�-ика�-и (User Story)": features/user-story-�-в�-ома�-и�-е�-кая-ве�-и�-ика�-и/ba-user-story.md
-    - "api-specification-post-api-v1-merchants (Document)": features/api-specification-post-api-v1-merchants/sa-document.md
-    - "user-story-merchant-onboarding-via-api (User Story)": features/user-story-merchant-onboarding-via-api/ba-user-story.md
-  - Риски и ограничения: risks-and-limitations.md
-  - Агенты:
-    - BA Agent:
-      - Профиль: agents/ba-agent/profile.md
-      - System Prompt: agents/ba-agent/system-prompt.md
-    - SA Agent:
-      - Профиль: agents/sa-agent/profile.md
-      - System Prompt: agents/sa-agent/system-prompt.md
+- Главная: index.md
+- Контекст:
+  - Глоссарий: context/glossary.md
+  - Ограничения: context/constraints.md
+  - Матрица решений: context/decision-matrix.md
+  - Технологический стек: context/tech-stack.md
+- ADR:
+  - Шаблон: adr/adr-template.md
+  - 'ADR-001: Модель процессинга': adr/adr-001-processing-model.md
+  - 'ADR-002: Audit Log': adr/adr-002-audit-log.md
+- Бизнес-правила:
+  - Онбординг: business-rules/onboarding-rules.md
+  - Транзакции: business-rules/transaction-rules.md
+  - Споры: business-rules/dispute-rules.md
+  - AML/CTF: business-rules/aml-rules.md
+- Данные:
+  - Data Dictionary: data/data-dictionary.md
+  - SLA Metrics: data/sla-metrics.md
+  - KPI Dictionary: data/kpi-dictionary.md
+- Интеграции:
+  - Карточные схемы: integrations/card-schemes.md
+  - KYC/KYB провайдер: integrations/kyc-provider.md
+  - TMS провайдер: integrations/tms-provider.md
+- Шаблоны:
+  - User Story: artifact-templates/user-story-template.md
+  - API Specification: artifact-templates/api-spec-template.md
+  - Sequence Diagram: artifact-templates/sequence-diagram-template.md
+  - Test Case: artifact-templates/test-case-template.md
+- Примеры:
+  - User Story: examples/example-user-story.md
+  - API Specification: examples/example-api-spec.md
+  - Review Feedback: examples/example-review-feedback.md
+- Артефакты:
+  - Обзор: artifacts/index.md
+  - Онбординг мерчанта:
+    - User Story (BA Agent): artifacts/merchant-onboarding/ba-user-story.md
+- Риски и ограничения: risks-and-limitations.md
+- Агенты:
+  - BA Agent:
+    - Профиль: agents/ba-agent/profile.md
+    - System Prompt: agents/ba-agent/system-prompt.md
+  - SA Agent:
+    - Профиль: agents/sa-agent/profile.md
+    - System Prompt: agents/sa-agent/system-prompt.md
