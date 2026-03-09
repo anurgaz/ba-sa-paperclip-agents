@@ -56,10 +56,10 @@ nav:
     - KYC/KYB провайдер: integrations/kyc-provider.md
     - TMS провайдер: integrations/tms-provider.md
   - Шаблоны:
-    - User Story: templates/user-story-template.md
-    - API Specification: templates/api-spec-template.md
-    - Sequence Diagram: templates/sequence-diagram-template.md
-    - Test Case: templates/test-case-template.md
+    - User Story: artifact-templates/user-story-template.md
+    - API Specification: artifact-templates/api-spec-template.md
+    - Sequence Diagram: artifact-templates/sequence-diagram-template.md
+    - Test Case: artifact-templates/test-case-template.md
   - Примеры:
     - User Story: examples/example-user-story.md
     - API Specification: examples/example-api-spec.md

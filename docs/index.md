@@ -69,4 +69,4 @@ flowlix-docs/
 ## Constraints
 
 Все артефакты проверяются на соответствие 12 ограничениям: PSD2, PCI DSS, AML/CTF, GDPR, SLA.
-Подробности: [docs/context/constraints.md](docs/context/constraints.md)
+Подробности: [Ограничения](context/constraints.md)
