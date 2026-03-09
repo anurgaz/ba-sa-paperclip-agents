@@ -66,6 +66,9 @@ nav:
     - Review Feedback: examples/example-review-feedback.md
   - Фичи:
     - Обзор: features/index.md
+    - "api-�-пе�-и�-ика�-ия-�-�-мена-подпи�-ки-� (User Story)": features/api-�-пе�-и�-ика�-ия-�-�-мена-подпи�-ки-�/sa-user-story.md
+    - "user-story-�-ек�-�-�-ен�-н�-е-пла�-ежи-�-е�-е� (User Story)": features/user-story-�-ек�-�-�-ен�-н�-е-пла�-ежи-�-е�-е�/ba-user-story.md
+    - "user-story-�-в�-ома�-и�-е�-кая-ве�-и�-ика�-и (User Story)": features/user-story-�-в�-ома�-и�-е�-кая-ве�-и�-ика�-и/ba-user-story.md
     - "api-specification-post-api-v1-merchants (Document)": features/api-specification-post-api-v1-merchants/sa-document.md
     - "user-story-merchant-onboarding-via-api (User Story)": features/user-story-merchant-onboarding-via-api/ba-user-story.md
   - Риски и ограничения: risks-and-limitations.md
