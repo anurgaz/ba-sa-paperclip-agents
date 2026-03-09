@@ -75,7 +75,8 @@ fi
 BR_REFS=$(grep -oE 'BR-[A-Z]+-[0-9]+' "$ARTIFACT" 2>/dev/null | sort -u || true)
 for ref in $BR_REFS; do
     PREFIX=$(echo "$ref" | sed 's/-[0-9]*$//')
-    if ! grep -rq "$ref" "$BR_DIR" 2>/dev/null; then
+    BR_NUM=$(echo "$ref" | grep -oE "[0-9]+$")
+        if ! grep -rqE "BR-[A-Z]+-0*$BR_NUM" "$BR_DIR" 2>/dev/null; then
         WARNINGS="$WARNINGS\n  - Referenced business rule $ref not found in business-rules/"
         ISSUES=$((ISSUES + 1))
     fi
