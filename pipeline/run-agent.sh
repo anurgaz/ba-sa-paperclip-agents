@@ -285,7 +285,7 @@ $(cat "$OUTPUT_FILE")"
         echo -e "${GREEN}  PASSED — Ready for human review${NC}"
         echo -e "${GREEN}  Artifact: $OUTPUT_FILE${NC}"
         [ -n "$ISSUE_ID" ] && echo -e "${GREEN}  Paperclip issue: $ISSUE_ID${NC}"
-        echo -e "${GREEN}  GitHub Pages: https://anurgaz.github.io/ba-sa-paperclip-agents/features/${NC}"
+        echo -e "${GREEN}  GitHub Pages: https://anurgaz.github.io/ba-sa-paperclip-agents/artifacts/${NC}"
         echo -e "${GREEN}========================================${NC}"
 
 
