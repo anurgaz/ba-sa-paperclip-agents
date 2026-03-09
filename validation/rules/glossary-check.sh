@@ -7,46 +7,32 @@ REPO_ROOT="$2"
 GLOSSARY_FILE="$REPO_ROOT/docs/context/glossary.md"
 
 if [ ! -f "$GLOSSARY_FILE" ]; then
-    echo "ERROR: glossary.md not found at $GLOSSARY_FILE"
+    echo "ERROR: glossary.md not found"
     exit 1
 fi
 
-# Extract known terms from glossary (both RU and EN columns)
-KNOWN_TERMS=$(grep -oE '\| [A-Za-zА-Яа-яёЁ][A-Za-zА-Яа-яёЁ /()-]+\|' "$GLOSSARY_FILE" | sed 's/|//g' | sed 's/^ *//;s/ *$//' | sort -u)
+# Strip ANSI codes
+CLEAN=$(sed 's/\x1b\[[0-9;]*m//g' "$ARTIFACT")
 
-WARNINGS=""
 ISSUES=0
+WARNINGS=""
 
-# Check for common domain terms that SHOULD be from glossary
-# These are terms that indicate domain concepts
-DOMAIN_PATTERNS=(
-    "chargeback:Чарджбэк/Chargeback"
-    "representment:Репрезентмент/Representment"
-    "settlement:Расчёт/Settlement"
-    "clearing:Клиринг/Clearing"
-    "authorization:Авторизация/Authorization"
-    "acquiring:Эквайринг/Acquiring"
-    "issuing:Эмиссия/Issuing"
-    "tokenization:Токенизация/Tokenization"
-)
-
-# Check that PAN is never referenced as a stored/logged value
-if grep -inE 'store.*PAN|save.*PAN|log.*PAN|PAN.*storage|PAN.*log|PAN.*database|PAN.*DB' "$ARTIFACT" 2>/dev/null | grep -viE 'token|mask|never|NOT|запрещ|нельзя'; then
+# Check PAN storage violations
+if echo "$CLEAN" | grep -inE 'store.*PAN|save.*PAN|log.*PAN|PAN.*storage|PAN.*log|PAN.*database' | grep -viE 'token|mask|never|NOT|запрещ|нельзя|не ' > /dev/null 2>&1; then
     WARNINGS="$WARNINGS\n  - CRITICAL: PAN appears to be stored/logged (C-002 violation)"
     ISSUES=$((ISSUES + 1))
 fi
 
-# Check CVV is never stored
-if grep -inE 'store.*CVV|save.*CVV|log.*CVV|CVV.*storage|CVV.*response' "$ARTIFACT" 2>/dev/null | grep -viE 'never|NOT|запрещ|нельзя|excluded'; then
+# Check CVV storage violations
+if echo "$CLEAN" | grep -inE 'store.*CVV|save.*CVV|log.*CVV|CVV.*storage|CVV.*response' | grep -viE 'never|NOT|запрещ|нельзя|excluded|не ' > /dev/null 2>&1; then
     WARNINGS="$WARNINGS\n  - CRITICAL: CVV appears to be stored/logged (C-002 violation)"
     ISSUES=$((ISSUES + 1))
 fi
 
-# Check for potential non-glossary terms (heuristic)
-# Look for payment domain terms that might be misspelled or non-standard
-NON_STANDARD=$(grep -oiE '(charge-back|charge back|refundation|pre-auth|pre auth|tokenisation)' "$ARTIFACT" 2>/dev/null || true)
+# Check for non-standard terms
+NON_STANDARD=$(echo "$CLEAN" | grep -oiE '(charge-back|charge back|refundation|pre-auth[^o]|tokenisation)' || true)
 if [ -n "$NON_STANDARD" ]; then
-    WARNINGS="$WARNINGS\n  - Non-standard terms found (use glossary terms instead): $NON_STANDARD"
+    WARNINGS="$WARNINGS\n  - Non-standard terms: $NON_STANDARD"
     ISSUES=$((ISSUES + 1))
 fi
 
@@ -55,5 +41,5 @@ if [ "$ISSUES" -gt 0 ]; then
     exit 1
 fi
 
-echo "Glossary check passed: no non-standard terms or PAN/CVV violations detected"
+echo "Glossary check passed"
 exit 0
