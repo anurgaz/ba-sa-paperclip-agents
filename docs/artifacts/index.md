@@ -8,3 +8,4 @@
 | [Онбординг мерчанта](merchant-onboarding/sa-api-spec.md) | SA Agent | API Specification | 2026-03-09 12:08 UTC |
 | [Инициирование спора](dispute-initiation/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
 | [Верификация UBO](ubo-verification/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
+| [Рекуррентные платежи](recurrent-payments/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
