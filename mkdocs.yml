@@ -64,6 +64,9 @@ nav:
     - User Story: examples/example-user-story.md
     - API Specification: examples/example-api-spec.md
     - Review Feedback: examples/example-review-feedback.md
+  - Фичи:
+    - Обзор: features/index.md
+    - "user-story-merchant-onboarding-via-api (User Story)": features/user-story-merchant-onboarding-via-api/ba-user-story.md
   - Риски и ограничения: risks-and-limitations.md
   - Агенты:
     - BA Agent:
