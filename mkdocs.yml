@@ -20,9 +20,6 @@ theme:
 plugins:
   - search:
       lang: ru
-  - plantuml:
-      puml_url: https://www.plantuml.com/plantuml/svg/
-      output_format: svg
 
 markdown_extensions:
   - admonition

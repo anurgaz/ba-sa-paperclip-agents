@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "docs/**"
-      - "agents/**"
-      - "mkdocs.yml"
 
 permissions:
   contents: read
@@ -31,11 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs-material mkdocs-plantuml
-
-      - name: Install PlantUML
-        run: |
-          sudo apt-get update && sudo apt-get install -y plantuml
+          pip install "mkdocs>=1.6,<2" "mkdocs-material>=9,<10"
 
       - name: Build docs
         run: mkdocs build --strict
