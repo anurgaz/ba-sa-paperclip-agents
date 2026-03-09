@@ -1,6 +1,4 @@
-# Flowlix Docs — B2B Processing Platform
-
-AI-native инфраструктура документации для BA/SA агентов платёжной B2B процессинговой платформы.
+# AI-native инфраструктура документации для BA/SA агентов платёжной B2B процессинговой платформы
 
 **GitHub Pages:** [anurgaz.github.io/ba-sa-paperclip-agents](https://anurgaz.github.io/ba-sa-paperclip-agents/)
 **Paperclip UI:** [159.69.28.60:3100](http://159.69.28.60:3100)
