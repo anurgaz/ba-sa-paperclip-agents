@@ -11,3 +11,4 @@
 | [Рекуррентные платежи](recurrent-payments/ba-user-story.md) | BA Agent | User Story | 2026-03-09 12:08 UTC |
 | [Рекуррентные платежи](recurrent-payments/sa-user-story.md) | SA Agent | User Story | 2026-03-09 12:08 UTC |
 | [Анализ интеграции Apple Pay](analiz-integratsii-apple-pay/ba-document.md) | BA Agent | Document | 2026-03-10 15:07 UTC |
+| [Информационная поддержка](informatsionnaya-podderzhka/ba-document.md) | BA Agent | Document | 2026-03-10 15:09 UTC |
