@@ -75,6 +75,8 @@ nav:
   - Рекуррентные платежи:
     - User Story (BA Agent): artifacts/recurrent-payments/ba-user-story.md
     - User Story (SA Agent): artifacts/recurrent-payments/sa-user-story.md
+  - Анализ интеграции Apple Pay:
+    - Document (BA Agent): artifacts/analiz-integratsii-apple-pay/ba-document.md
 - Риски и ограничения: risks-and-limitations.md
 - Агенты:
   - BA Agent:
