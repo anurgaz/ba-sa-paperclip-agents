@@ -7,7 +7,7 @@
 ## Общая архитектура
 
 ```
-Merchant → Flowlix API → Processing Engine → Card Scheme Network → Issuer
+Merchant → Payment Service API → Processing Engine → Card Scheme Network → Issuer
                                     ↕
                               Tokenization Service
                                     ↕
@@ -48,7 +48,7 @@ Merchant → Flowlix API → Processing Engine → Card Scheme Network → Issue
 
 ### 3-D Secure 2.x (Visa Secure)
 - **Протокол:** EMV 3DS 2.2
-- **Компоненты:** 3DS Server (Flowlix) → Directory Server (Visa) → ACS (Issuer)
+- **Компоненты:** 3DS Server (Payment Service) → Directory Server (Visa) → ACS (Issuer)
 - **Flow:**
   1. AReq (Authentication Request) → Visa DS
   2. Visa DS → Issuer ACS

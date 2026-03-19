@@ -22,7 +22,7 @@
 **Request:**
 ```json
 {
-  "reference_id": "flowlix_merchant_550e8400",
+  "reference_id": "ps_merchant_550e8400",
   "company": {
     "legal_name": "Acme GmbH",
     "registration_number": "HRB 123456",
@@ -35,14 +35,14 @@
     }
   },
   "checks": ["company_registration", "active_status", "address_verification", "adverse_media"],
-  "webhook_url": "https://api.flowlix.com/webhooks/kyb-result"
+  "webhook_url": "https://api.payment-service.com/webhooks/kyb-result"
 }
 ```
 
 **Response (async — webhook):**
 ```json
 {
-  "reference_id": "flowlix_merchant_550e8400",
+  "reference_id": "ps_merchant_550e8400",
   "status": "COMPLETED",
   "result": "VERIFIED | FAILED | MANUAL_REVIEW",
   "checks": [
@@ -81,7 +81,7 @@
 **Request:**
 ```json
 {
-  "reference_id": "flowlix_ubo_660f9500",
+  "reference_id": "ps_ubo_660f9500",
   "individual": {
     "full_name": "Hans Mueller",
     "date_of_birth": "1985-06-15",
@@ -94,14 +94,14 @@
     }
   },
   "checks": ["document_verification", "liveness", "sanctions", "pep", "adverse_media"],
-  "webhook_url": "https://api.flowlix.com/webhooks/kyc-result"
+  "webhook_url": "https://api.payment-service.com/webhooks/kyc-result"
 }
 ```
 
 **Response (async — webhook):**
 ```json
 {
-  "reference_id": "flowlix_ubo_660f9500",
+  "reference_id": "ps_ubo_660f9500",
   "status": "COMPLETED",
   "result": "CLEAR | MATCH | PEP_FLAG | FAILED",
   "checks": [
@@ -122,21 +122,21 @@
 **Request:**
 ```json
 {
-  "reference_id": "flowlix_daily_20260308",
+  "reference_id": "ps_daily_20260308",
   "entities": [
     {"id": "merchant_001", "type": "BUSINESS", "name": "Acme GmbH", "country": "DE"},
     {"id": "ubo_001", "type": "INDIVIDUAL", "name": "Hans Mueller", "dob": "1985-06-15"}
   ],
   "lists": ["EU_CONSOLIDATED", "OFAC_SDN", "UN_SC", "UK_HMT"],
   "match_threshold": 85,
-  "webhook_url": "https://api.flowlix.com/webhooks/screening-result"
+  "webhook_url": "https://api.payment-service.com/webhooks/screening-result"
 }
 ```
 
 **Response:**
 ```json
 {
-  "reference_id": "flowlix_daily_20260308",
+  "reference_id": "ps_daily_20260308",
   "status": "COMPLETED",
   "total_screened": 2,
   "matches": 0,

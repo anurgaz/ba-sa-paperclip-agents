@@ -3,14 +3,14 @@
 ## C4 Container Diagram
 
 ```kroki-plantuml
-@startuml Flowlix Agent Platform — C4 Container Diagram
+@startuml Payment Service Agent Platform — C4 Container Diagram
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
 LAYOUT_WITH_LEGEND()
 LAYOUT_LEFT_RIGHT()
 
-title Flowlix Agent Platform — C4 Container Diagram
+title Payment Service Agent Platform — C4 Container Diagram
 
 Person(cpo, "CPO / Product Manager", "Создаёт задачи для агентов,\nревьюит артефакты")
 
@@ -28,7 +28,7 @@ System_Boundary(pipeline, "Agent Pipeline") {
 }
 
 System_Boundary(context, "Knowledge Base") {
-    ContainerDb(docs_repo, "flowlix-docs", "Git Repository", "Глоссарий, ограничения,\nбизнес-правила, ADR,\nшаблоны артефактов")
+    ContainerDb(docs_repo, "payment-service-docs", "Git Repository", "Глоссарий, ограничения,\nбизнес-правила, ADR,\nшаблоны артефактов")
 }
 
 System_Ext(claude, "Claude API", "Anthropic claude-sonnet-4-20250514\nMessages API, max_tokens 8192")

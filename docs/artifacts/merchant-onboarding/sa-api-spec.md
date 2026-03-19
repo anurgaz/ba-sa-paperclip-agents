@@ -16,14 +16,14 @@ validation: 4/4 PASS
 
 openapi: 3.1.0
 info:
-  title: Flowlix Merchant Onboarding API
+  title: Payment Service Merchant Onboarding API
   version: 1.0.0
   description: API для онбординга мерчантов в B2B карточный процессинг
 
 servers:
-  - url: https://api.flowlix.com/v1
+  - url: https://api.payment-service.com/v1
     description: Production
-  - url: https://api-staging.flowlix.com/v1
+  - url: https://api-staging.payment-service.com/v1
     description: Staging
 
 paths:

@@ -68,7 +68,7 @@ mkdir -p "$OUTPUT_DIR"
 TIMESTAMP=$(date -u +"%Y%m%d-%H%M%S")
 OUTPUT_FILE="$OUTPUT_DIR/${AGENT}-${TIMESTAMP}.md"
 
-echo -e "${CYAN}=== Flowlix Agent Pipeline ===${NC}"
+echo -e "${CYAN}=== Payment Service Agent Pipeline ===${NC}"
 echo -e "Agent: ${GREEN}${AGENT_LABEL}${NC}"
 echo -e "Task: ${TASK}"
 echo -e "Output: ${OUTPUT_FILE}"

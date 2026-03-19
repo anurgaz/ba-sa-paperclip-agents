@@ -64,7 +64,7 @@
 ```
 
 **Recommendation values:**
-| Value | Действие Flowlix |
+| Value | Действие Payment Service |
 |-------|-----------------|
 | APPROVE | Продолжить авторизацию |
 | REVIEW | Авторизовать + создать alert для manual review |
@@ -106,9 +106,9 @@
 
 ## Event Stream (async monitoring)
 
-### POST /events (Flowlix → TMS)
+### POST /events (Payment Service → TMS)
 
-Flowlix отправляет поток событий для offline analysis.
+Payment Service отправляет поток событий для offline analysis.
 
 **Events:**
 - `transaction.authorized` — каждая авторизация
@@ -139,7 +139,7 @@ Flowlix отправляет поток событий для offline analysis.
 
 ## Error Handling
 
-| HTTP Status | Действие Flowlix |
+| HTTP Status | Действие Payment Service |
 |------------|-----------------|
 | Timeout (>200ms) | Авторизовать (fail-open) + log + async retry scoring | 
 | 503 Unavailable | Авторизовать (fail-open) + immediate alert to Operations |

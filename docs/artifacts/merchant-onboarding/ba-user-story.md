@@ -19,7 +19,7 @@ validation: 4/4 PASS
 
 **Как** Integration Partner (PayFac/PSP)  
 **Я хочу** отправить POST /api/v1/merchants для онбординга нового мерчанта  
-**Чтобы** автоматически подключить его к карточному эквайрингу через Flowlix в рамках модели PayFac
+**Чтобы** автоматически подключить его к карточному эквайрингу через Payment Service в рамках модели PayFac
 
 ## Acceptance Criteria
 

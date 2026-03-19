@@ -251,7 +251,7 @@ Idempotency-Key: {unique_key}  # Обязателен для данной опе
   "merchant_id": "mid_123456789012345",
   "subscription_id": "sub_1234567890abcdef",
   "ip_address": "203.0.113.1",
-  "user_agent": "FlowlixSDK/1.0",
+  "user_agent": "PaymentServiceSDK/1.0",
   "idempotency_key": "idem_abc123",
   "details": {
     "reason": "customer_request",

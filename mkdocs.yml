@@ -1,6 +1,6 @@
-site_name: Flowlix Docs — B2B Processing Platform
+site_name: Payment Service Docs — B2B Processing Platform
 site_description: Документация BA/SA агентов платёжной B2B процессинговой платформы
-  Flowlix
+  Payment Service
 site_url: https://anurgaz.github.io/ba-sa-paperclip-agents/
 theme:
   name: material

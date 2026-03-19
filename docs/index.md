@@ -1,4 +1,4 @@
-# Flowlix Docs — B2B Processing Platform
+# Payment Service Docs — B2B Processing Platform
 
 AI-native инфраструктура документации для BA/SA агентов платёжной B2B процессинговой платформы.
 
@@ -35,7 +35,7 @@ flowchart TD
     end
 
     subgraph KB["📚 Knowledge Base"]
-        REPO[("flowlix-docs<br>Глоссарий · Ограничения<br>Бизнес-правила · ADR<br>Шаблоны артефактов")]
+        REPO[("payment-service-docs<br>Глоссарий · Ограничения<br>Бизнес-правила · ADR<br>Шаблоны артефактов")]
     end
 
     subgraph EXTERNAL["☁️ Внешние системы"]
@@ -124,7 +124,7 @@ flowchart TD
 ## Структура репозитория
 
 ```
-flowlix-docs/
+payment-service-docs/
 ├── docs/                   # Документация и контекст
 │   ├── context/            # Глоссарий, ограничения, decision matrix, tech stack
 │   ├── adr/                # Architecture Decision Records

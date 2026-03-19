@@ -20,7 +20,7 @@ POST /api/v1/merchants
 ```
 
 ### Description
-Регистрация нового мерчанта (суб-мерчанта) на платформе Flowlix. Создаёт сущность Merchant, инициирует асинхронную KYB проверку компании и KYC проверку каждого UBO. Результат KYB/KYC приходит через webhook.
+Регистрация нового мерчанта (суб-мерчанта) на платформе Payment Service. Создаёт сущность Merchant, инициирует асинхронную KYB проверку компании и KYC проверку каждого UBO. Результат KYB/KYC приходит через webhook.
 
 ### Authentication
 - **Type:** Bearer Token (OAuth 2.0)
@@ -107,7 +107,7 @@ POST /api/v1/merchants
       }
     }
   ],
-  "webhook_url": "https://acme-shop.de/webhooks/flowlix"
+  "webhook_url": "https://acme-shop.de/webhooks/payment-service"
 }
 ```
 
